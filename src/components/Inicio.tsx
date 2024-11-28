@@ -63,7 +63,7 @@ const SocialProfile = () => {
                     <h1 className="text-2xl font-bold text-black">
                         <span>MARCO ANTONIO SALINAS SOLIS</span>
                     </h1>
-                    <p className="text-gray-600 mt-2">Desarrollador web</p>
+                    <p className="text-gray-600 mt-2">Desarrollador web - JR</p>
 
                     {/* Iconos y fecha */}
                     <div className="mt-4 flex justify-center space-x-4 text-sm text-gray-500">
