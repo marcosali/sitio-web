@@ -1,0 +1,21 @@
+/* index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fondo y color global para el modo oscuro */
+.dark div{
+    background-color: rgb(20, 20, 20);
+    color: #eff6ff; /* Cambiar color del texto dentro de divs en modo oscuro */
+}
+
+/* Modo oscuro para encabezados y párrafos */
+.dark h1, .dark h2, .dark h3, .dark p {
+    color: #eff6ff; /* Cambiar el texto en modo oscuro */
+}
+
+/* Excluir el div de portada del modo oscuro global */
+.dark div.cover-portada {
+    background-color: inherit; /* No tomar el fondo oscuro */
+    color: inherit; /* No cambiar el color del texto */
+}
