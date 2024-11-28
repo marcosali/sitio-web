@@ -1,11 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom"; // Importa Link para la navegación
 
 const Navbar = () => {
     const [active, setActive] = useState<string>("Historia");
 
-    const handleClick = (section: string) => { // Especificar tipo string
+    // Cargar la sección activa desde localStorage al montar el componente
+    useEffect(() => {
+        const savedActiveSection = localStorage.getItem("activeSection");
+        if (savedActiveSection) {
+            setActive(savedActiveSection); // Restaura la sección activa
+        }
+    }, []);
+
+    const handleClick = (section: string) => {
         setActive(section);
+        localStorage.setItem("activeSection", section); // Guarda la sección activa
     };
 
     return (

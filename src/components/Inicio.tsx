@@ -6,9 +6,14 @@ import coverImage from "../assets/setup.jpeg";
 
 const SocialProfile = () => {
     const [isDarkCover, setIsDarkCover] = useState(false);
+    const [isFollowing, setIsFollowing] = useState(false); // Estado para seguir
 
     const toggleDarkCover = () => {
         setIsDarkCover(!isDarkCover);
+    };
+
+    const toggleFollow = () => {
+        setIsFollowing(!isFollowing); // Cambiar el estado de seguimiento
     };
 
     return (
@@ -47,15 +52,15 @@ const SocialProfile = () => {
 
                 {/* Foto de perfil */}
                 <div className=" -mt-16 flex justify-center">
-                        <img
-                            src={marcoImage}
-                            alt="Perfil de Marco"
-                            className="relative -mb-16 w-28 h-28 rounded-full border-4 shadow-lg"
-                            style={{
-                                width: "112px",
-                                height: "112px",
-                            }}
-                        />
+                    <img
+                        src={marcoImage}
+                        alt="Perfil de Marco"
+                        className="relative -mb-16 w-28 h-28 rounded-full border-4 shadow-lg"
+                        style={{
+                            width: "112px",
+                            height: "112px",
+                        }}
+                    />
                 </div>
 
                 {/* Contenido del perfil */}
@@ -86,8 +91,11 @@ const SocialProfile = () => {
 
                     {/* Botón de interacción */}
                     <div className="mt-4">
-                        <button className="bg-red-800 text-white py-2 px-6 rounded-full font-medium hover:bg-red-700 shadow-lg">
-                            Seguir
+                        <button
+                            className={`py-2 px-6 rounded-full font-medium shadow-lg ${isFollowing ? 'bg-red-600 text-white' : 'bg-red-800 text-white hover:bg-red-700'}`}
+                            onClick={toggleFollow}
+                        >
+                            {isFollowing ? "Siguiendo" : "Seguir"}
                         </button>
                     </div>
                 </div>

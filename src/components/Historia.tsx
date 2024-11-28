@@ -21,7 +21,7 @@ const SocialPost: React.FC<SocialPostProps> = ({
     postImage
 }) => {
     return (
-        <div className="bg-blue-50 max-w-3xl mx-auto p-6 mt-8 rounded-lg hover:opacity-90 hover:shadow-xl transition-all duration-300 ease-in-out">
+        <div className="bg-blue-50 max-w-3xl mx-auto p-6 mt-8 rounded-lg hover:opacity-90 ">
             {/* Encabezado de la publicación */}
             <div className="flex items-center space-x-4 mb-4">
                 {/* Imagen de perfil */}
